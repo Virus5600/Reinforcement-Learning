@@ -267,7 +267,7 @@ class A2C:
         actionProbs = np.clip(actionProbs, 0.0, 1.0)
 
         # Temperature scaling for exploration (higher early in training)
-        temperature = max(0.5, 1.0 - (self.EPISODES / 500.0))  # Gradually decrease temperature
+        temperature = max(0.5, 1.0 - (self.EPISODES / 1000.0))  # Gradually decrease temperature
         actionProbs = np.power(actionProbs, 1.0 / temperature)
 
         # Masking for the prediction
@@ -291,7 +291,7 @@ class A2C:
                 actionProbs = np.ones(self.ACTION_SPACE, dtype=float) / self.ACTION_SPACE
                 
         # Add small epsilon for pure exploration (decreases over time)
-        epsilon = max(0.01, 0.1 - (self.EPISODES / 1000.0))
+        epsilon = max(0.01, 0.1 - (self.EPISODES / 2000.0))
         if np.random.random() < epsilon:
             # Pure random action from valid actions
             validIndices = np.where(validMask)[0]
