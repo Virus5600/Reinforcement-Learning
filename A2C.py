@@ -106,6 +106,7 @@ class A2C:
         sharedHiddenLayer = Dense(256, activation = "relu")(inputLayer)
         sharedHiddenLayer = Dense(256, activation = "relu")(sharedHiddenLayer)
         sharedHiddenLayer = Dense(128, activation = "relu")(sharedHiddenLayer)
+        sharedHiddenLayer = Dense(64, activation = "relu")(sharedHiddenLayer)
 
         # Actor output layer
         actorOutput = Dense(
@@ -267,7 +268,7 @@ class A2C:
         actionProbs = np.clip(actionProbs, 0.0, 1.0)
 
         # Temperature scaling for exploration (higher early in training)
-        temperature = max(0.5, 1.0 - (self.EPISODES / 1000.0))  # Gradually decrease temperature
+        temperature = max(0.5, 1.0 - (self.EPISODES / 2000.0))  # Gradually decrease temperature
         actionProbs = np.power(actionProbs, 1.0 / temperature)
 
         # Masking for the prediction
