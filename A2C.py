@@ -268,7 +268,7 @@ class A2C:
         actionProbs = np.clip(actionProbs, 0.0, 1.0)
 
         # Temperature scaling for exploration (higher early in training)
-        temperature = max(0.5, 1.0 - (self.EPISODES / 2000.0))  # Gradually decrease temperature
+        temperature = max(0.8, 1.5 - (self.EPISODES / 3000.0))
         actionProbs = np.power(actionProbs, 1.0 / temperature)
 
         # Masking for the prediction
