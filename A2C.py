@@ -11,6 +11,7 @@ WILDCARD = Literal["*"]
 
 METRIC_NAMES = Literal[
     "Episodes",
+    "Current Episode",
     "Win Rate",
     "Highest Score",
     "Time Efficiency",
@@ -63,7 +64,7 @@ class A2C:
         self.MAX_LIVES: int = maxLives
         self.GRID_SIZE: int = gridSize
         self.ACTION_SPACE: int = gridSize * gridSize * 2
-        self.STATE_SHAPE: tuple = (gridSize, gridSize, 6)  # Added channel for interaction history
+        self.STATE_SHAPE: tuple = (gridSize, gridSize, 7)
         self.INPUT_SIZE: int = np.prod(self.STATE_SHAPE)
 
         # Hyperparameters
@@ -187,7 +188,7 @@ class A2C:
         )
         stateArr[:, :, 4] = tilesRevealed / (self.GRID_SIZE * self.GRID_SIZE - self.GAME.total_mines)
 
-        # Channel 5: Interaction History - NEW
+        # Channel 5: Interaction History
         # Encodes how recently each tile was interacted with
         for x in range(self.GRID_SIZE):
             for y in range(self.GRID_SIZE):
@@ -198,6 +199,31 @@ class A2C:
                     stateArr[x, y, 5] = max(0, 1.0 - (stepsAgo / 10.0))
                 else:
                     stateArr[x, y, 5] = 0.0
+
+        # Channel 6: Adjacent Number Information
+        for x in range(self.GRID_SIZE):
+            for y in range(self.GRID_SIZE):
+                # Only for unrevealed tiles
+                if not self.GAME.grid[x][y].is_revealed:
+                    adjacentNumberSum = 0
+                    adjacentRevealedCount = 0
+                    
+                    for dx in [-1, 0, 1]:
+                        for dy in [-1, 0, 1]:
+                            if dx == 0 and dy == 0: continue
+
+                            nx, ny = x + dx, y + dy
+                            if 0 <= nx < self.GRID_SIZE and 0 <= ny < self.GRID_SIZE:
+                                adjTile = self.GAME.grid[nx][ny]
+
+                                if adjTile.is_revealed and not adjTile.is_mine:
+                                    adjacentNumberSum += adjTile.adjacent_mines
+                                    adjacentRevealedCount += 1
+                    
+                    # Average of adjacent numbers, normalized by 8 (max possible value)
+                    if adjacentRevealedCount > 0:
+                        stateArr[x, y, 6] = (adjacentNumberSum / adjacentRevealedCount) / 8.0
+
 
         # Flatten the state array for model input
         return convert_to_tensor(stateArr.flatten().reshape(1, self.INPUT_SIZE))
@@ -426,6 +452,7 @@ class A2C:
 
         Metrics Available:
         - Episodes
+        - Current Episode
         - Win Rate
         - Highest Score
         - Time Efficiency
@@ -450,6 +477,8 @@ class A2C:
         for metric in metrics:
             if metric == "Episodes":
                 metric_strings.append(f"Episodes: {self.EPISODES - 1}")
+            elif metric == "Current Episode":
+                metric_strings.append(f"Current Episode: {self.EPISODES}")
             elif metric == "Win Rate":
                 metric_strings.append(f"Win Rate: {self.WIN_RATE:.2%}")
             elif metric == "Highest Score":
