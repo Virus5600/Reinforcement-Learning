@@ -1,9 +1,10 @@
+import pygame
 from tensorflow import GradientTape, clip_by_value, constant, convert_to_tensor, reduce_sum, square, float32
 from tensorflow.keras import Input, Model
 from tensorflow.math import log
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
-from typing import List, Literal, Union
+from typing import Dict, List, Literal, Union
 import numpy as np
 
 WILDCARD = Literal["*"]
@@ -24,9 +25,14 @@ class A2C:
     Advantage Actor-Critic (A2C) Agent for Minesweeper.
     """
     
-    def __init__(self, gridSize, maxLives, gameInstance, discountFactor = 0.99, lr = 0.001, betaEntropy = 0.01, maxGradNorm = 0.5, advantageClip = 10.0):
+    def __init__(self, gridSize, maxLives, gameInstance, discountFactor = 0.99, lr: float | Dict[int, float] = 0.001, betaEntropy = 0.01, maxGradNorm = 0.5, advantageClip = 10.0):
         """
         Initializes the Actor-Critic (A2C) agent with the given parameters.
+
+        It's `lr` parameter can be either a `float` to specify a fixed learning rate, or
+        a `dict[int, float]` to specify learning rate decay at certain episode milestones.
+        If the `lr` is specified as a `dict`, it will always check for the `0` key first,
+        and if the episode 0 is non-existent, it will use the default value of `0.001`.
 
         :param gridSize: Size of the game grid (gridSize x gridSize).
         :type gridSize: int
@@ -40,8 +46,8 @@ class A2C:
         :param discountFactor: Discount factor for future rewards (default is 0.99).
         :type discountFactor: float
 
-        :param lr: Learning rate for the optimizer (default is 0.001).
-        :type lr: float
+        :param lr: Learning rate for the optimizer (default is 0.001). Can be a dictionary to perform learning rate decay.
+        :type lr: float | dict[int, float]
 
         :param betaEntropy: Coefficient for entropy regularization (default is 0.01).
         :type betaEntropy: float
@@ -91,6 +97,15 @@ class A2C:
         self.TILE_INTERACTION_HISTORY: dict = {}  			# Track all interactions per tile
         self.REPETITIVE_PENALTY_MULTIPLIER: float = 1.0  	# Escalating penalty for repetition
 
+        # Initialize episode-specific variables
+        if isinstance(lr, float):
+            self.currentLr = lr
+        else:
+            if 0 in lr:
+                self.currentLr = lr[0]
+            else:
+                self.currentLr = 0.001
+
         # Model and Training Components
         self.model = self.buildModel()
         self.optimizer = self.buildOptimizer()
@@ -128,7 +143,7 @@ class A2C:
 
     def buildOptimizer(self):
         """Builds the optimizer for training the model."""
-        return Adam(learning_rate = self.LR, clipnorm = self.MAX_GRAD_NORM)
+        return Adam(learning_rate = self.currentLr, clipnorm = self.MAX_GRAD_NORM)
 
     def _encodeState(self):
         """
@@ -194,15 +209,7 @@ class A2C:
         :returns: Boolean mask where `True` = valid action and `False` = invalid action.
         :rtype: np.ndarray
         """
-        mask = np.zeros(self.ACTION_SPACE, dtype = bool)
-
-        # Track recent interactions to prevent loops
-        recentInteractions = {}
-        for i, action in enumerate(self.ACTION_HISTORY[-10:]):  # Look at last 10 actions
-            if len(action) == 3:
-                x, y, actionType = action
-                key = (x, y, actionType)
-                recentInteractions[key] = recentInteractions.get(key, 0) + 1
+        mask = np.zeros(self.ACTION_SPACE, dtype=bool)
 
         for x in range(self.GRID_SIZE):
             for y in range(self.GRID_SIZE):
@@ -211,38 +218,27 @@ class A2C:
 
                 # Reveal action is valid if tile is not yet revealed and not flagged
                 if not tile.is_revealed and not tile.is_flagged:
-                    # Check if we've recently tried to reveal this tile too many times
-                    revealCount = recentInteractions.get((x, y, 0), 0)
-                    if revealCount < 2:  # Allow max 2 attempts in recent history
-                        mask[idx] = True
+                    mask[idx] = True
 
                 # Flag action handling
                 flagIdx = idx + self.GRID_SIZE * self.GRID_SIZE
-                
                 if not tile.is_revealed:
                     # Can flag if not already flagged and have flags remaining
                     if not tile.is_flagged and self.GAME.flags_placed < self.GAME.flag_limit:
-                        flagCount = recentInteractions.get((x, y, 1), 0)
-                        if flagCount < 2:  # Prevent excessive flagging attempts
-                            mask[flagIdx] = True
+                        mask[flagIdx] = True
                     # Can unflag if already flagged
                     elif tile.is_flagged:
-                        # But prevent rapid flag/unflag cycles
-                        unflagCount = recentInteractions.get((x, y, 1), 0)
-                        if unflagCount < 1:  # More strict on unflagging
-                            mask[flagIdx] = True
+                        mask[flagIdx] = True
 
-        # Ensure at least one action is available
+        # Handle stuck state where no actions are valid
         if not np.any(mask):
-            # Find any unrevealed, unflagged tile for reveal
+            # This typically happens if all remaining unrevealed tiles are flagged.
+            # To get unstuck, the only valid move is to un-flag any flagged tile.
             for x in range(self.GRID_SIZE):
                 for y in range(self.GRID_SIZE):
-                    if not self.GAME.grid[x][y].is_revealed and not self.GAME.grid[x][y].is_flagged:
-                        idx = x * self.GRID_SIZE + y
-                        mask[idx] = True
-                        break
-                if np.any(mask):
-                    break
+                    if self.GAME.grid[x][y].is_flagged:
+                        flagIdx = (x * self.GRID_SIZE + y) + self.GRID_SIZE * self.GRID_SIZE
+                        mask[flagIdx] = True
 
         return mask
 
@@ -369,14 +365,59 @@ class A2C:
         
         return totalLoss.numpy(), advantage.numpy()
 
-    def resetEpisode(self):
-        """Reset episode-specific tracking variables."""
+    def endEpisode(self, newGameInstance):
+        """
+        Reset episode-specific tracking variables, update tracked metrics,
+        and apply learning rate decay if applicable.
+
+        :param newGameInstance: A new instance of the game environment for the next episode.
+        :type newGameInstance: MinesweeperGame
+        """
+        elapsedTime = ((pygame.time.get_ticks() - self.GAME.start_time) / 1000)
+        
+        # -----------------------
+        # Update tracked metrics
+        # -----------------------
+        self.GAME_CONCLUSIONS.append(1 if self.GAME.game_won else 0)
+        self.SCORES.append(self.GAME.score)
+        self.EPISODES += 1
+        self.ELAPSED_TIME.append(elapsedTime)
+        self.WIN_RATE = sum(self.GAME_CONCLUSIONS) / len(self.GAME_CONCLUSIONS)
+        self.HIGHEST_SCORE = max(self.HIGHEST_SCORE, self.GAME.score)
+        self.TIME_EFFICIENCY = sum(self.CLICKS["total"]) / sum(self.ELAPSED_TIME) if sum(self.ELAPSED_TIME) > 0 else 0
+
+        # ---------------------------------
+        # Update episode-specific trackers
+        # ---------------------------------
         self.LAST_STATE_CHANGE = 0
         self.LAST_ACTION = None
         self.LAST_ACTIONS = {}
         self.TILE_INTERACTION_HISTORY = {}
         self.ACTION_HISTORY = []
         self.REPETITIVE_PENALTY_MULTIPLIER = 1.0
+
+        # ----------------------
+        # Update LR if possible
+        # ----------------------
+        if isinstance(self.LR, dict):
+            new_lr = self.optimizer.learning_rate.numpy() # Start with current LR
+            
+            # Find the latest episode milestone that has been passed
+            for episode_milestone in sorted(self.LR.keys()):
+                if self.EPISODES >= episode_milestone:
+                    new_lr = self.LR[episode_milestone]
+            
+            # If the learning rate needs to be changed, update the optimizer
+            if new_lr != self.optimizer.learning_rate.numpy():
+                print(f"\n[LR Scheduler] Episode {self.EPISODES}: Learning rate changed to {new_lr:.6f}\n")
+                self.optimizer.learning_rate.assign(new_lr)
+
+        # ---------------------
+        # Update game instance
+        # ---------------------
+        self.GAME = newGameInstance
+
+        return
 
     def printMetrics(self, metrics: List[Union[METRIC_NAMES, WILDCARD]] = ["*"], asString: bool = False) -> str | None:
         """
