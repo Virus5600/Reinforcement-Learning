@@ -1,0 +1,128 @@
+Log created on 2025-10-11 17:34:36
+==================================================
+
+============================================================
+Episode 1 finished: LOSS | Score: 2832 | Loss: 1.2244
+Episodes: 1 | Win Rate: 0.00% | Highest Score: 2832.00 | Time Efficiency: 5.21 steps/sec | Left Click Avg: 14.00 c/g (2.35 c/s) | Right Click Avg: 17.00 c/g (2.86 c/s) | Total Click Avg: 31.00 c/g (5.21 c/s) | Game Conclusion History: 0 Wins, 1 Losses
+============================================================
+
+
+============================================================
+Episode 2 finished: LOSS | Score: 1790 | Loss: 1.0688
+Episodes: 2 | Win Rate: 0.00% | Highest Score: 2832.00 | Time Efficiency: 6.35 steps/sec | Left Click Avg: 16.50 c/g (2.91 c/s) | Right Click Avg: 19.50 c/g (3.44 c/s) | Total Click Avg: 36.00 c/g (6.35 c/s) | Game Conclusion History: 0 Wins, 2 Losses
+============================================================
+
+
+============================================================
+Episode 3 finished: LOSS | Score: 2727 | Loss: 1.0708
+Episodes: 3 | Win Rate: 0.00% | Highest Score: 2832.00 | Time Efficiency: 6.79 steps/sec | Left Click Avg: 14.33 c/g (2.92 c/s) | Right Click Avg: 19.00 c/g (3.87 c/s) | Total Click Avg: 33.33 c/g (6.79 c/s) | Game Conclusion History: 0 Wins, 3 Losses
+============================================================
+
+
+============================================================
+Episode 4 finished: WIN | Score: 3426 | Loss: 0.8475
+Episodes: 4 | Win Rate: 25.00% | Highest Score: 3426.00 | Time Efficiency: 6.79 steps/sec | Left Click Avg: 13.00 c/g (2.99 c/s) | Right Click Avg: 16.50 c/g (3.80 c/s) | Total Click Avg: 29.50 c/g (6.79 c/s) | Game Conclusion History: 1 Wins, 3 Losses
+============================================================
+
+
+============================================================
+Episode 5 finished: LOSS | Score: 3667 | Loss: 1.4030
+Episodes: 5 | Win Rate: 20.00% | Highest Score: 3667.00 | Time Efficiency: 6.61 steps/sec | Left Click Avg: 11.80 c/g (3.07 c/s) | Right Click Avg: 13.60 c/g (3.54 c/s) | Total Click Avg: 25.40 c/g (6.61 c/s) | Game Conclusion History: 1 Wins, 4 Losses
+============================================================
+
+
+============================================================
+Episode 6 finished: LOSS | Score: 1962 | Loss: 0.9348
+Episodes: 6 | Win Rate: 16.67% | Highest Score: 3667.00 | Time Efficiency: 6.14 steps/sec | Left Click Avg: 11.50 c/g (2.73 c/s) | Right Click Avg: 14.33 c/g (3.41 c/s) | Total Click Avg: 25.83 c/g (6.14 c/s) | Game Conclusion History: 1 Wins, 5 Losses
+============================================================
+
+
+============================================================
+Episode 7 finished: LOSS | Score: 3480 | Loss: 0.3392
+Episodes: 7 | Win Rate: 14.29% | Highest Score: 3667.00 | Time Efficiency: 6.01 steps/sec | Left Click Avg: 10.71 c/g (2.58 c/s) | Right Click Avg: 14.29 c/g (3.43 c/s) | Total Click Avg: 25.00 c/g (6.01 c/s) | Game Conclusion History: 1 Wins, 6 Losses
+============================================================
+
+
+============================================================
+Episode 8 finished: LOSS | Score: 2154 | Loss: 1.7603
+Episodes: 8 | Win Rate: 12.50% | Highest Score: 3667.00 | Time Efficiency: 5.69 steps/sec | Left Click Avg: 10.38 c/g (2.40 c/s) | Right Click Avg: 14.25 c/g (3.29 c/s) | Total Click Avg: 24.62 c/g (5.69 c/s) | Game Conclusion History: 1 Wins, 7 Losses
+============================================================
+
+
+============================================================
+Episode 9 finished: LOSS | Score: 3367 | Loss: 1.3200
+Episodes: 9 | Win Rate: 11.11% | Highest Score: 3667.00 | Time Efficiency: 5.58 steps/sec | Left Click Avg: 10.00 c/g (2.33 c/s) | Right Click Avg: 13.89 c/g (3.24 c/s) | Total Click Avg: 23.89 c/g (5.58 c/s) | Game Conclusion History: 1 Wins, 8 Losses
+============================================================
+
+
+============================================================
+Episode 10 finished: LOSS | Score: 2865 | Loss: 0.8571
+Episodes: 10 | Win Rate: 10.00% | Highest Score: 3667.00 | Time Efficiency: 5.58 steps/sec | Left Click Avg: 9.80 c/g (2.34 c/s) | Right Click Avg: 13.60 c/g (3.24 c/s) | Total Click Avg: 23.40 c/g (5.58 c/s) | Game Conclusion History: 1 Wins, 9 Losses
+============================================================
+
+
+============================================================
+Episode 11 finished: LOSS | Score: 2360 | Loss: 1.4131
+Episodes: 11 | Win Rate: 9.09% | Highest Score: 3667.00 | Time Efficiency: 5.54 steps/sec | Left Click Avg: 9.73 c/g (2.37 c/s) | Right Click Avg: 13.00 c/g (3.17 c/s) | Total Click Avg: 22.73 c/g (5.54 c/s) | Game Conclusion History: 1 Wins, 10 Losses
+============================================================
+
+
+============================================================
+Episode 12 finished: LOSS | Score: 3377 | Loss: 1.3228
+Episodes: 12 | Win Rate: 8.33% | Highest Score: 3667.00 | Time Efficiency: 5.54 steps/sec | Left Click Avg: 9.58 c/g (2.39 c/s) | Right Click Avg: 12.67 c/g (3.15 c/s) | Total Click Avg: 22.25 c/g (5.54 c/s) | Game Conclusion History: 1 Wins, 11 Losses
+============================================================
+
+
+============================================================
+Episode 13 finished: LOSS | Score: 3256 | Loss: 0.8637
+Episodes: 13 | Win Rate: 7.69% | Highest Score: 3667.00 | Time Efficiency: 5.59 steps/sec | Left Click Avg: 9.38 c/g (2.38 c/s) | Right Click Avg: 12.69 c/g (3.21 c/s) | Total Click Avg: 22.08 c/g (5.59 c/s) | Game Conclusion History: 1 Wins, 12 Losses
+============================================================
+
+
+============================================================
+Episode 14 finished: LOSS | Score: 0 | Loss: 2.8965
+Episodes: 14 | Win Rate: 7.14% | Highest Score: 3667.00 | Time Efficiency: 5.54 steps/sec | Left Click Avg: 8.93 c/g (2.35 c/s) | Right Click Avg: 12.14 c/g (3.19 c/s) | Total Click Avg: 21.07 c/g (5.54 c/s) | Game Conclusion History: 1 Wins, 13 Losses
+============================================================
+
+
+============================================================
+Episode 15 finished: WIN | Score: 4506 | Loss: 0.8146
+Episodes: 15 | Win Rate: 13.33% | Highest Score: 4506.00 | Time Efficiency: 5.57 steps/sec | Left Click Avg: 9.20 c/g (2.32 c/s) | Right Click Avg: 12.93 c/g (3.25 c/s) | Total Click Avg: 22.13 c/g (5.57 c/s) | Game Conclusion History: 2 Wins, 13 Losses
+============================================================
+
+
+============================================================
+Episode 16 finished: LOSS | Score: 3397 | Loss: 1.0980
+Episodes: 16 | Win Rate: 12.50% | Highest Score: 4506.00 | Time Efficiency: 5.60 steps/sec | Left Click Avg: 8.94 c/g (2.28 c/s) | Right Click Avg: 13.00 c/g (3.32 c/s) | Total Click Avg: 21.94 c/g (5.60 c/s) | Game Conclusion History: 2 Wins, 14 Losses
+============================================================
+
+
+============================================================
+Episode 17 finished: LOSS | Score: 1672 | Loss: 0.8588
+Episodes: 17 | Win Rate: 11.76% | Highest Score: 4506.00 | Time Efficiency: 5.63 steps/sec | Left Click Avg: 9.00 c/g (2.34 c/s) | Right Click Avg: 12.65 c/g (3.29 c/s) | Total Click Avg: 21.65 c/g (5.63 c/s) | Game Conclusion History: 2 Wins, 15 Losses
+============================================================
+
+
+============================================================
+Episode 18 finished: LOSS | Score: 1734 | Loss: 1.2560
+Episodes: 18 | Win Rate: 11.11% | Highest Score: 4506.00 | Time Efficiency: 5.63 steps/sec | Left Click Avg: 9.33 c/g (2.36 c/s) | Right Click Avg: 12.89 c/g (3.26 c/s) | Total Click Avg: 22.22 c/g (5.63 c/s) | Game Conclusion History: 2 Wins, 16 Losses
+============================================================
+
+
+============================================================
+Episode 19 finished: LOSS | Score: 3226 | Loss: 0.9587
+Episodes: 19 | Win Rate: 10.53% | Highest Score: 4506.00 | Time Efficiency: 5.62 steps/sec | Left Click Avg: 9.16 c/g (2.37 c/s) | Right Click Avg: 12.58 c/g (3.26 c/s) | Total Click Avg: 21.74 c/g (5.62 c/s) | Game Conclusion History: 2 Wins, 17 Losses
+============================================================
+
+
+============================================================
+Episode 20 finished: WIN | Score: 4483 | Loss: 1.4224
+Episodes: 20 | Win Rate: 15.00% | Highest Score: 4506.00 | Time Efficiency: 5.68 steps/sec | Left Click Avg: 9.10 c/g (2.37 c/s) | Right Click Avg: 12.70 c/g (3.31 c/s) | Total Click Avg: 21.80 c/g (5.68 c/s) | Game Conclusion History: 3 Wins, 17 Losses
+============================================================
+
+
+============================================================
+Episode 21 finished: LOSS | Score: 3722 | Loss: 0.8866
+Episodes: 21 | Win Rate: 14.29% | Highest Score: 4506.00 | Time Efficiency: 5.75 steps/sec | Left Click Avg: 8.95 c/g (2.34 c/s) | Right Click Avg: 13.10 c/g (3.42 c/s) | Total Click Avg: 22.05 c/g (5.75 c/s) | Game Conclusion History: 3 Wins, 18 Losses
+============================================================
+

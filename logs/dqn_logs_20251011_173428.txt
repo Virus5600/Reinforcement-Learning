@@ -1,0 +1,200 @@
+Log created on 2025-10-11 17:34:29
+==================================================
+[Ep 1, Step 10] Score: 2752 | Reward: -0.10 | Loss: N/A | Epsilon: 1.0000 | Action: (7, 4) Flag | Revealed: 50/59
+[Ep 1, Step 20] Score: 2812 | Reward: -0.10 | Loss: N/A | Epsilon: 1.0000 | Action: (6, 4) Reveal | Revealed: 53/59
+[Ep 1, Step 30] Score: 2832 | Reward: -0.10 | Loss: N/A | Epsilon: 1.0000 | Action: (6, 2) Flag | Revealed: 57/59
+[Ep 1, Step 31] Score: 2832 | Reward: -100.00 | Loss: N/A | Epsilon: 1.0000 | Action: (6, 0) Reveal | Revealed: 58/59
+
+============================================================
+Episode 1 finished: LOSS | Score: 2832
+Episodes: 1 | Win Rate: 0.00% | Highest Score: 2832.00 | Time Efficiency: 9.95 steps/sec | Left Click Avg: 14.00 c/g (4.49 c/s) | Right Click Avg: 17.00 c/g (5.45 c/s) | Total Click Avg: 31.00 c/g (9.95 c/s) | Game Conclusion History: 0 Wins, 1 Losses
+============================================================
+
+[Ep 2, Step 10] Score: 1153 | Reward: 26.90 | Loss: N/A | Epsilon: 0.9950 | Action: (5, 0) Reveal | Revealed: 41/59
+[Ep 2, Step 17] Score: 2034 | Reward: -100.00 | Loss: N/A | Epsilon: 0.9950 | Action: (5, 4) Reveal | Revealed: 56/59
+
+============================================================
+Episode 2 finished: LOSS | Score: 2034
+Episodes: 2 | Win Rate: 0.00% | Highest Score: 2832.00 | Time Efficiency: 10.21 steps/sec | Left Click Avg: 12.50 c/g (5.32 c/s) | Right Click Avg: 11.50 c/g (4.89 c/s) | Total Click Avg: 24.00 c/g (10.21 c/s) | Game Conclusion History: 0 Wins, 2 Losses
+============================================================
+
+[Ep 3, Step 10] Score: 3282 | Reward: 0.90 | Loss: N/A | Epsilon: 0.9900 | Action: (7, 7) Reveal | Revealed: 56/59
+[Ep 3, Step 12] Score: 3282 | Reward: -100.00 | Loss: N/A | Epsilon: 0.9900 | Action: (3, 7) Reveal | Revealed: 58/59
+
+============================================================
+Episode 3 finished: LOSS | Score: 3282
+Episodes: 3 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 9.67 steps/sec | Left Click Avg: 10.33 c/g (4.99 c/s) | Right Click Avg: 9.67 c/g (4.67 c/s) | Total Click Avg: 20.00 c/g (9.67 c/s) | Game Conclusion History: 0 Wins, 3 Losses
+============================================================
+
+[Ep 4, Step 10] Score: 2980 | Reward: 0.90 | Loss: 551.0502 | Epsilon: 0.9851 | Action: (7, 6) Reveal | Revealed: 52/59
+[Ep 4, Step 20] Score: 3055 | Reward: 0.90 | Loss: 211.7796 | Epsilon: 0.9851 | Action: (7, 3) Reveal | Revealed: 55/59
+[Ep 4, Step 29] Score: 3125 | Reward: -100.00 | Loss: 55.2830 | Epsilon: 0.9851 | Action: (7, 7) Reveal | Revealed: 59/59
+
+============================================================
+Episode 4 finished: LOSS | Score: 3125
+Episodes: 4 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 8.28 steps/sec | Left Click Avg: 10.50 c/g (3.91 c/s) | Right Click Avg: 11.75 c/g (4.37 c/s) | Total Click Avg: 22.25 c/g (8.28 c/s) | Game Conclusion History: 0 Wins, 4 Losses
+============================================================
+
+[Ep 5, Step 10] Score: 170 | Reward: 8.90 | Loss: 126.9856 | Epsilon: 0.9801 | Action: (5, 0) Reveal | Revealed: 13/59
+[Ep 5, Step 20] Score: 3142 | Reward: -0.10 | Loss: 60.5386 | Epsilon: 0.9801 | Action: (4, 6) Flag | Revealed: 57/59
+[Ep 5, Step 23] Score: 3142 | Reward: -100.00 | Loss: 155.2103 | Epsilon: 0.9801 | Action: (1, 4) Reveal | Revealed: 59/59
+
+============================================================
+Episode 5 finished: LOSS | Score: 3142
+Episodes: 5 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 7.83 steps/sec | Left Click Avg: 11.00 c/g (3.85 c/s) | Right Click Avg: 11.40 c/g (3.99 c/s) | Total Click Avg: 22.40 c/g (7.83 c/s) | Game Conclusion History: 0 Wins, 5 Losses
+============================================================
+
+[Ep 6, Step 10] Score: 2415 | Reward: -0.10 | Loss: 51.3393 | Epsilon: 0.9752 | Action: (6, 5) Flag | Revealed: 48/59
+[Ep 6, Step 20] Score: 2522 | Reward: -0.10 | Loss: 26.0259 | Epsilon: 0.9752 | Action: (7, 3) Flag | Revealed: 55/59
+[Ep 6, Step 21] Score: 2522 | Reward: -100.00 | Loss: 177.1613 | Epsilon: 0.9752 | Action: (7, 3) Reveal | Revealed: 56/59
+
+============================================================
+Episode 6 finished: LOSS | Score: 2522
+Episodes: 6 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 7.75 steps/sec | Left Click Avg: 10.67 c/g (3.73 c/s) | Right Click Avg: 11.50 c/g (4.02 c/s) | Total Click Avg: 22.17 c/g (7.75 c/s) | Game Conclusion History: 0 Wins, 6 Losses
+============================================================
+
+[Ep 7, Step 10] Score: 257 | Reward: -0.10 | Loss: 171.4880 | Epsilon: 0.9704 | Action: (4, 3) Flag | Revealed: 16/59
+[Ep 7, Step 20] Score: 1047 | Reward: -0.10 | Loss: 108.6708 | Epsilon: 0.9704 | Action: (3, 4) Flag | Revealed: 44/59
+[Ep 7, Step 30] Score: 1123 | Reward: -0.10 | Loss: 34.1469 | Epsilon: 0.9704 | Action: (6, 7) Flag | Revealed: 51/59
+[Ep 7, Step 39] Score: 1203 | Reward: -100.00 | Loss: 1083.5551 | Epsilon: 0.9704 | Action: (6, 6) Reveal | Revealed: 56/59
+
+============================================================
+Episode 7 finished: LOSS | Score: 1203
+Episodes: 7 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 7.91 steps/sec | Left Click Avg: 11.86 c/g (3.82 c/s) | Right Click Avg: 12.71 c/g (4.09 c/s) | Total Click Avg: 24.57 c/g (7.91 c/s) | Game Conclusion History: 0 Wins, 7 Losses
+============================================================
+
+[Ep 8, Step 10] Score: 2380 | Reward: -0.10 | Loss: 798.2328 | Epsilon: 0.9655 | Action: (7, 6) Flag | Revealed: 48/59
+[Ep 8, Step 20] Score: 2375 | Reward: -0.10 | Loss: 177.1869 | Epsilon: 0.9655 | Action: (6, 5) Flag | Revealed: 53/59
+[Ep 8, Step 21] Score: 2375 | Reward: -100.00 | Loss: 622.8222 | Epsilon: 0.9655 | Action: (3, 5) Reveal | Revealed: 54/59
+
+============================================================
+Episode 8 finished: LOSS | Score: 2375
+Episodes: 8 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 7.14 steps/sec | Left Click Avg: 11.38 c/g (3.37 c/s) | Right Click Avg: 12.75 c/g (3.77 c/s) | Total Click Avg: 24.12 c/g (7.14 c/s) | Game Conclusion History: 0 Wins, 8 Losses
+============================================================
+
+[Ep 9, Step 10] Score: 1701 | Reward: -0.10 | Loss: 389.1861 | Epsilon: 0.9607 | Action: (6, 0) Reveal | Revealed: 40/59
+[Ep 9, Step 20] Score: 1761 | Reward: 0.90 | Loss: 101.1299 | Epsilon: 0.9607 | Action: (4, 1) Reveal | Revealed: 47/59
+[Ep 9, Step 25] Score: 1791 | Reward: -100.00 | Loss: 80.2201 | Epsilon: 0.9607 | Action: (7, 6) Reveal | Revealed: 51/59
+
+============================================================
+Episode 9 finished: LOSS | Score: 1791
+Episodes: 9 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 6.84 steps/sec | Left Click Avg: 11.56 c/g (3.26 c/s) | Right Click Avg: 12.67 c/g (3.58 c/s) | Total Click Avg: 24.22 c/g (6.84 c/s) | Game Conclusion History: 0 Wins, 9 Losses
+============================================================
+
+[Ep 10, Step 10] Score: 2980 | Reward: 49.90 | Loss: 144.6133 | Epsilon: 0.9559 | Action: (2, 5) Reveal | Revealed: 54/59
+[Ep 10, Step 12] Score: 2980 | Reward: -100.00 | Loss: 119.1669 | Epsilon: 0.9559 | Action: (2, 0) Reveal | Revealed: 55/59
+
+============================================================
+Episode 10 finished: LOSS | Score: 2980
+Episodes: 10 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 6.40 steps/sec | Left Click Avg: 11.00 c/g (3.06 c/s) | Right Click Avg: 12.00 c/g (3.34 c/s) | Total Click Avg: 23.00 c/g (6.40 c/s) | Game Conclusion History: 0 Wins, 10 Losses
+============================================================
+
+[Ep 11, Step 10] Score: 3050 | Reward: -0.10 | Loss: 240.5344 | Epsilon: 0.9511 | Action: (7, 5) Reveal | Revealed: 56/59
+[Ep 11, Step 19] Score: 3015 | Reward: -100.00 | Loss: 371.9595 | Epsilon: 0.9511 | Action: (0, 2) Reveal | Revealed: 60/59
+
+============================================================
+Episode 11 finished: LOSS | Score: 3015
+Episodes: 11 | Win Rate: 0.00% | Highest Score: 3282.00 | Time Efficiency: 6.13 steps/sec | Left Click Avg: 10.82 c/g (2.93 c/s) | Right Click Avg: 11.82 c/g (3.20 c/s) | Total Click Avg: 22.64 c/g (6.13 c/s) | Game Conclusion History: 0 Wins, 11 Losses
+============================================================
+
+[Ep 12, Step 10] Score: 3475 | Reward: -0.10 | Loss: 244.4679 | Epsilon: 0.9464 | Action: (0, 1) Flag | Revealed: 60/59
+[Ep 12, Step 12] Score: 3525 | Reward: -100.00 | Loss: 533.9542 | Epsilon: 0.9464 | Action: (0, 1) Reveal | Revealed: 61/59
+
+============================================================
+Episode 12 finished: LOSS | Score: 3525
+Episodes: 12 | Win Rate: 0.00% | Highest Score: 3525.00 | Time Efficiency: 6.01 steps/sec | Left Click Avg: 10.33 c/g (2.86 c/s) | Right Click Avg: 11.42 c/g (3.15 c/s) | Total Click Avg: 21.75 c/g (6.01 c/s) | Game Conclusion History: 0 Wins, 12 Losses
+============================================================
+
+[Ep 13, Step 10] Score: 2445 | Reward: -0.10 | Loss: 428.3032 | Epsilon: 0.9416 | Action: (0, 1) Flag | Revealed: 47/59
+[Ep 13, Step 18] Score: 2531 | Reward: -100.00 | Loss: 848.7119 | Epsilon: 0.9416 | Action: (0, 3) Reveal | Revealed: 57/59
+
+============================================================
+Episode 13 finished: LOSS | Score: 2531
+Episodes: 13 | Win Rate: 0.00% | Highest Score: 3525.00 | Time Efficiency: 5.94 steps/sec | Left Click Avg: 10.38 c/g (2.87 c/s) | Right Click Avg: 11.08 c/g (3.06 c/s) | Total Click Avg: 21.46 c/g (5.94 c/s) | Game Conclusion History: 0 Wins, 13 Losses
+============================================================
+
+[Ep 14, Step 1] Score: 13625 | Reward: 100.00 | Loss: 248.0003 | Epsilon: 0.9369 | Action: (7, 7) Reveal | Revealed: 59/59
+
+============================================================
+Episode 14 finished: WIN | Score: 13625
+Episodes: 14 | Win Rate: 7.14% | Highest Score: 13625.00 | Time Efficiency: 5.82 steps/sec | Left Click Avg: 9.71 c/g (2.83 c/s) | Right Click Avg: 10.29 c/g (2.99 c/s) | Total Click Avg: 20.00 c/g (5.82 c/s) | Game Conclusion History: 1 Wins, 13 Losses
+============================================================
+
+[Ep 15, Step 10] Score: 1957 | Reward: 0.90 | Loss: 365.3166 | Epsilon: 0.9322 | Action: (2, 6) Reveal | Revealed: 52/59
+[Ep 15, Step 20] Score: 2027 | Reward: -0.10 | Loss: 639.8282 | Epsilon: 0.9322 | Action: (0, 6) Flag | Revealed: 56/59
+[Ep 15, Step 30] Score: 2027 | Reward: -100.00 | Loss: 101.6255 | Epsilon: 0.9322 | Action: (4, 4) Reveal | Revealed: 58/59
+
+============================================================
+Episode 15 finished: LOSS | Score: 2027
+Episodes: 15 | Win Rate: 6.67% | Highest Score: 13625.00 | Time Efficiency: 5.87 steps/sec | Left Click Avg: 9.80 c/g (2.79 c/s) | Right Click Avg: 10.87 c/g (3.09 c/s) | Total Click Avg: 20.67 c/g (5.87 c/s) | Game Conclusion History: 1 Wins, 14 Losses
+============================================================
+
+[Ep 16, Step 10] Score: 769 | Reward: -0.10 | Loss: 530.1489 | Epsilon: 0.9276 | Action: (2, 5) Reveal | Revealed: 32/59
+[Ep 16, Step 16] Score: 1496 | Reward: -100.00 | Loss: 391.0623 | Epsilon: 0.9276 | Action: (2, 1) Reveal | Revealed: 57/59
+
+============================================================
+Episode 16 finished: LOSS | Score: 1496
+Episodes: 16 | Win Rate: 6.25% | Highest Score: 13625.00 | Time Efficiency: 5.84 steps/sec | Left Click Avg: 9.81 c/g (2.81 c/s) | Right Click Avg: 10.56 c/g (3.03 c/s) | Total Click Avg: 20.38 c/g (5.84 c/s) | Game Conclusion History: 1 Wins, 15 Losses
+============================================================
+
+[Ep 17, Step 10] Score: 1347 | Reward: -0.10 | Loss: 525.5510 | Epsilon: 0.9229 | Action: (2, 7) Flag | Revealed: 52/59
+[Ep 17, Step 20] Score: 1382 | Reward: -0.10 | Loss: 118.2262 | Epsilon: 0.9229 | Action: (0, 2) Flag | Revealed: 56/59
+[Ep 17, Step 30] Score: 1492 | Reward: -0.10 | Loss: 244.9062 | Epsilon: 0.9229 | Action: (4, 0) Flag | Revealed: 59/59
+[Ep 17, Step 35] Score: 1452 | Reward: -100.00 | Loss: 380.5804 | Epsilon: 0.9229 | Action: (6, 4) Reveal | Revealed: 61/59
+
+============================================================
+Episode 17 finished: LOSS | Score: 1452
+Episodes: 17 | Win Rate: 5.88% | Highest Score: 13625.00 | Time Efficiency: 5.77 steps/sec | Left Click Avg: 10.00 c/g (2.72 c/s) | Right Click Avg: 11.24 c/g (3.05 c/s) | Total Click Avg: 21.24 c/g (5.77 c/s) | Game Conclusion History: 1 Wins, 16 Losses
+============================================================
+
+[Ep 18, Step 9] Score: 2825 | Reward: -100.00 | Loss: 1234.8743 | Epsilon: 0.9183 | Action: (6, 4) Reveal | Revealed: 54/59
+
+============================================================
+Episode 18 finished: LOSS | Score: 2825
+Episodes: 18 | Win Rate: 5.56% | Highest Score: 13625.00 | Time Efficiency: 5.70 steps/sec | Left Click Avg: 9.83 c/g (2.73 c/s) | Right Click Avg: 10.72 c/g (2.97 c/s) | Total Click Avg: 20.56 c/g (5.70 c/s) | Game Conclusion History: 1 Wins, 17 Losses
+============================================================
+
+[Ep 19, Step 10] Score: 2527 | Reward: -0.10 | Loss: 333.4852 | Epsilon: 0.9137 | Action: (7, 0) Flag | Revealed: 46/59
+[Ep 19, Step 19] Score: 2612 | Reward: -100.00 | Loss: 404.8808 | Epsilon: 0.9137 | Action: (3, 4) Reveal | Revealed: 54/59
+
+============================================================
+Episode 19 finished: LOSS | Score: 2612
+Episodes: 19 | Win Rate: 5.26% | Highest Score: 13625.00 | Time Efficiency: 5.71 steps/sec | Left Click Avg: 9.74 c/g (2.72 c/s) | Right Click Avg: 10.74 c/g (3.00 c/s) | Total Click Avg: 20.47 c/g (5.71 c/s) | Game Conclusion History: 1 Wins, 18 Losses
+============================================================
+
+[Ep 20, Step 10] Score: 2495 | Reward: 0.90 | Loss: 193.7749 | Epsilon: 0.9092 | Action: (0, 2) Reveal | Revealed: 51/59
+[Ep 20, Step 20] Score: 2510 | Reward: -0.10 | Loss: 725.3863 | Epsilon: 0.9092 | Action: (0, 5) Flag | Revealed: 55/59
+[Ep 20, Step 30] Score: 2520 | Reward: -0.10 | Loss: 737.4549 | Epsilon: 0.9092 | Action: (2, 0) Flag | Revealed: 57/59
+[Ep 20, Step 32] Score: 2470 | Reward: -100.00 | Loss: 107.0165 | Epsilon: 0.9092 | Action: (1, 7) Reveal | Revealed: 58/59
+
+============================================================
+Episode 20 finished: LOSS | Score: 2470
+Episodes: 20 | Win Rate: 5.00% | Highest Score: 13625.00 | Time Efficiency: 5.69 steps/sec | Left Click Avg: 9.95 c/g (2.69 c/s) | Right Click Avg: 11.10 c/g (3.00 c/s) | Total Click Avg: 21.05 c/g (5.69 c/s) | Game Conclusion History: 1 Wins, 19 Losses
+============================================================
+
+[Ep 21, Step 10] Score: 2865 | Reward: -0.10 | Loss: 158.0000 | Epsilon: 0.9046 | Action: (5, 2) Flag | Revealed: 51/59
+[Ep 21, Step 20] Score: 2935 | Reward: -0.10 | Loss: 154.8109 | Epsilon: 0.9046 | Action: (1, 6) Flag | Revealed: 56/59
+[Ep 21, Step 25] Score: 2935 | Reward: -100.00 | Loss: 45.8049 | Epsilon: 0.9046 | Action: (1, 6) Reveal | Revealed: 58/59
+
+============================================================
+Episode 21 finished: LOSS | Score: 2935
+Episodes: 21 | Win Rate: 4.76% | Highest Score: 13625.00 | Time Efficiency: 5.72 steps/sec | Left Click Avg: 10.00 c/g (2.69 c/s) | Right Click Avg: 11.24 c/g (3.02 c/s) | Total Click Avg: 21.24 c/g (5.72 c/s) | Game Conclusion History: 1 Wins, 20 Losses
+============================================================
+
+[Ep 22, Step 10] Score: 3137 | Reward: -0.10 | Loss: 184.0867 | Epsilon: 0.9001 | Action: (1, 5) Flag | Revealed: 52/59
+[Ep 22, Step 20] Score: 3107 | Reward: -0.10 | Loss: 3193.3701 | Epsilon: 0.9001 | Action: (6, 6) Flag | Revealed: 57/59
+[Ep 22, Step 22] Score: 3107 | Reward: -100.00 | Loss: 1275.7748 | Epsilon: 0.9001 | Action: (6, 0) Reveal | Revealed: 58/59
+
+============================================================
+Episode 22 finished: LOSS | Score: 3107
+Episodes: 22 | Win Rate: 4.55% | Highest Score: 13625.00 | Time Efficiency: 5.74 steps/sec | Left Click Avg: 9.95 c/g (2.68 c/s) | Right Click Avg: 11.32 c/g (3.05 c/s) | Total Click Avg: 21.27 c/g (5.74 c/s) | Game Conclusion History: 1 Wins, 21 Losses
+============================================================
+
+[Ep 23, Step 10] Score: 1617 | Reward: 0.90 | Loss: 573.0459 | Epsilon: 0.8956 | Action: (2, 4) Reveal | Revealed: 40/59
+[Ep 23, Step 19] Score: 1889 | Reward: -100.00 | Loss: 361.2065 | Epsilon: 0.8956 | Action: (6, 1) Reveal | Revealed: 57/59
+
+============================================================
+Episode 23 finished: LOSS | Score: 1889
+Episodes: 23 | Win Rate: 4.35% | Highest Score: 13625.00 | Time Efficiency: 5.75 steps/sec | Left Click Avg: 9.96 c/g (2.70 c/s) | Right Click Avg: 11.22 c/g (3.04 c/s) | Total Click Avg: 21.17 c/g (5.75 c/s) | Game Conclusion History: 1 Wins, 22 Losses
+============================================================
+
