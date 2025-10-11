@@ -1,11 +1,11 @@
-import pygame
 from tensorflow import GradientTape, clip_by_value, constant, convert_to_tensor, reduce_sum, square, float32
 from tensorflow.keras import Input, Model
-from tensorflow.math import log
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
+from tensorflow.math import log
 from typing import Dict, List, Literal, Union
 import numpy as np
+import pygame
 
 WILDCARD = Literal["*"]
 

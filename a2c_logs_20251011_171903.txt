@@ -1,0 +1,20 @@
+Log created on 2025-10-11 17:19:07
+==================================================
+
+============================================================
+Episode 1 finished: LOSS | Score: 2440
+Episodes: 1 | Win Rate: 0.00% | Highest Score: 2440.00 | Time Efficiency: 3.02 steps/sec | Left Click Avg: 5.00 c/g (1.51 c/s) | Right Click Avg: 5.00 c/g (1.51 c/s) | Total Click Avg: 10.00 c/g (3.02 c/s) | Game Conclusion History: 0 Wins, 1 Losses
+============================================================
+
+
+============================================================
+Episode 2 finished: LOSS | Score: 1711
+Episodes: 2 | Win Rate: 0.00% | Highest Score: 2440.00 | Time Efficiency: 3.68 steps/sec | Left Click Avg: 7.50 c/g (2.21 c/s) | Right Click Avg: 5.00 c/g (1.47 c/s) | Total Click Avg: 12.50 c/g (3.68 c/s) | Game Conclusion History: 0 Wins, 2 Losses
+============================================================
+
+
+============================================================
+Episode 3 finished: WIN | Score: 4289
+Episodes: 3 | Win Rate: 33.33% | Highest Score: 4289.00 | Time Efficiency: 4.35 steps/sec | Left Click Avg: 7.33 c/g (1.88 c/s) | Right Click Avg: 9.67 c/g (2.47 c/s) | Total Click Avg: 17.00 c/g (4.35 c/s) | Game Conclusion History: 1 Wins, 2 Losses
+============================================================
+
