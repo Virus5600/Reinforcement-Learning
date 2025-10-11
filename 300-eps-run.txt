@@ -1,0 +1,23 @@
+[Monte Carlo]
+9.00% - Win Rate
+300 - Episodes
+37650.00 - Highest Score
+7.37 steps/s - Time Efficiency
+[8.92 c/g (2.36 c/s), 18.99 c/g (5.02 c/s), 27.91 c/g (7.37 c/s)] - Avg Clicks Per Episodes [Left, Right, Total]
+27 Wins, 273 Losses - Game History
+
+[Deep Q-Learning]
+7.00% - Win Rate
+300 - Episodes
+13625.00 - Highest Score
+6.38 steps/s - Time Efficiency
+[8.32 c/g (2.11 c/s), 16.88 c/g (4.28 c/s), 25.20 c/g (6.38 c/s)] - Avg Clicks Per Episodes [Left, Right, Total]
+21 Wins, 279 Losses - Game History
+
+[Actor-Critic]
+11.00% - Win Rate
+300 - Episodes
+56850.00 - Highest Score
+9.61 steps/s - Time Efficiency
+[7.66 c/g (0.46 c/s), 151.08 c/g (9.15 c/s), 158.74 c/g (9.61 c/s)] - Avg Clicks Per Episodes [Left, Right, Total]
+33 Wins, 267 Losses - Game History
